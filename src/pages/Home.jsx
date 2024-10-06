@@ -17,7 +17,7 @@ const Home = () => {
     useEffect(() => {
             const r = searchParams.get('r')
             if(r){
-                navigate(-2);
+                navigate(-1);
             }
         },[searchParams]);
 
