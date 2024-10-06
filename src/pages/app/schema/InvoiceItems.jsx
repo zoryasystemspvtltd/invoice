@@ -1,6 +1,5 @@
 
 import IUIList from "../../common/IUIList";
-import IUIInvoiceItems from "../../common/shared/IUIInvoiceItems";
 import IUIPage from "../../common/IUIPage"
 
 export const ListInvoiceItem= () => {

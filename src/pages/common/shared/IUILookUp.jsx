@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Col, Row, Container } from "react-bootstrap";
-import { getData } from '../../../store/api-db'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Form from 'react-bootstrap/Form';
 
 const IUILookUp = (props) => {
@@ -10,7 +8,6 @@ const IUILookUp = (props) => {
     const [text, setText] = useState("")
 
     const [dataSet, setDataSet] = useState(useSelector((state) => state.api[schema?.module]))
-    const dispatch = useDispatch();
 
     useEffect(() => {
         if (!schema?.module) {

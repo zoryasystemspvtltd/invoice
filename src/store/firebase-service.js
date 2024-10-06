@@ -1,13 +1,13 @@
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
-import { db, auth, signInWithGooglePopup, signInWithGoogleRedirect } from "./firebase";
-import { collection, addDoc, updateDoc, doc, getDoc, getDocs, query, where, limit, orderBy, startAfter, and, or, getCountFromServer } from "firebase/firestore";
+import { db, auth} from "./firebase";
+import { collection, addDoc, updateDoc, doc, getDoc, getDocs, query, where, limit, orderBy, and, or, getCountFromServer } from "firebase/firestore";
 
 const application = 'DUMMY';
 const api = {};
 const status = [
     'new'
 ]
-const pageSize = 2;
+//const pageSize = 2;
 
 api.loginUser = async (action) => {
     const loginResponse = await signInWithEmailAndPassword(auth, action.data.email, action.data.password);
@@ -86,7 +86,7 @@ api.editData = async (action) => {
     const docRef = doc(db, action.module, action.data.id);
 
     // Update the timestamp field with the value from the server
-    const response = await updateDoc(docRef, action.data);
+    await updateDoc(docRef, action.data);
 
     return { data: action.data.id };
 
@@ -125,7 +125,6 @@ api.getFilters = ({ or, ...rest }) => {
 
 api.getData = async (action) => {
     const dataRef = collection(db, action.module);
-    const availableOption = action.option;
     // < less than
     // <= less than or equal to
     // == equal to
@@ -185,7 +184,7 @@ api.getData = async (action) => {
 
 
     const filter = query(dataRef, conditions);
-    const q = option.recordPerPage == 0
+    const q = option.recordPerPage === 0
         ? query(filter, orderBy(option.sortColumnName, option.sortDirection))
         : query(filter, orderBy(option.sortColumnName, option.sortDirection), limit(option.recordPerPage));
     const counterSnapshot = await getCountFromServer(q);

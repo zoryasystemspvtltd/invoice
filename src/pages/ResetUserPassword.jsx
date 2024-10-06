@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from "react-router-dom";
-import logo from '../assets/images/logo.png';
-import ICarousel from "./common/ICarousel";
+import { Alert, Button} from 'react-bootstrap';
 import { useDispatch } from 'react-redux'
 import Modal from 'react-bootstrap/Modal';
 import { resetPassword } from "../store/api-db";
@@ -16,7 +13,6 @@ const IUIResetPasswordElement = (props) => {
         setShow(true);
     }
 
-    const navigate = useNavigate();
     const [email, setEmail] = useState(props?.value);
     const [notice, setNotice] = useState("");
 

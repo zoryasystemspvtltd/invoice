@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Col, Row, Form, Container } from "react-bootstrap";
+import { Button, Col, Row, Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSingleData, editData, addData, selectModuleItem } from '../../store/api-db'
 import { useDispatch, useSelector } from 'react-redux'
@@ -108,7 +108,7 @@ const IUIPage = (props) => {
                 if (!data)
                     return
 
-                if (id != undefined)
+                if (id !== undefined)
                     dispatch(editData({ module: module, data: data }));
                 else
                     dispatch(addData({ module: module, data: data }));

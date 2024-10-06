@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 const IUIInvoiceItems = () => {
     const module = "invoiceItem"
+    
     // State to hold the list of invoiceItems
     const [invoiceItems, setInvoiceItems] = useState([]);
     // State to hold the current input values
@@ -55,6 +56,7 @@ const IUIInvoiceItems = () => {
 
     // Function to add a new invoice item
     const addInvoiceItem = () => {
+        console.log(module)
         if (item.trim() !== '' && qty.trim() !== '') {
             const newItem = { item, qty, weight, rate, hsnCode, sgst, cgst, mkngChrg, addChrg, hmChrg };
             if (editIndex !== null) {

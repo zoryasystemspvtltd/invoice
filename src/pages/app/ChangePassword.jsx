@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
-import { changePassword, resetSave } from "../../store/api-db";
+import { changePassword } from "../../store/api-db";
 
 const ChangePassword = () => {
     const module = 'identity';

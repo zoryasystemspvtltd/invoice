@@ -1,6 +1,4 @@
-import { Col, Row } from "react-bootstrap";
-import { useSelector } from "react-redux";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import {  Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../provider/authProvider";
 import { useEffect } from "react";
 

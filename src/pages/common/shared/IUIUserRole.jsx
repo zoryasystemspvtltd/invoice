@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { getData, setModuleDataItem } from '../../../store/api-db';
+import { getData } from '../../../store/api-db';
 import { useDispatch, useSelector } from 'react-redux'
-import { Button, Col, Row, Form, Container } from "react-bootstrap";
+import {  Col, Row, Form } from "react-bootstrap";
 
 const IUIUserRole = (props) => {
     const module = "role"

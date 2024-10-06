@@ -3,7 +3,6 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { updateProfile, resetSave } from '../../../store/api-db';
-import IUIModuleMessage from '../shared/IUIModuleMessage';
 import IUIPageElement from '../shared/IUIPageElement';
 
 const IUIUserProfile = (props) => {
@@ -91,7 +90,7 @@ const IUIUserProfile = (props) => {
                     address: data.address,
                 }
 
-                if (loggedInUser != undefined)
+                if (loggedInUser !== undefined)
                     dispatch(updateProfile({ module: module, data: userData }));
             }
         }

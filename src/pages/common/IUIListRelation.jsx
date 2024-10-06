@@ -36,6 +36,7 @@ const IUIListRelation = (props) => {
                 , searchCondition: newBaseFilter
             }
             dispatch(getData({ module: module, options: pageOptions }));
+            console.log(baseFilter)
         }
     }, [props]);
 

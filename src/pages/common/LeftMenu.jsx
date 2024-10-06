@@ -1,7 +1,6 @@
 import { useState } from "react";
 import IUIMenuItem from "./shared/IUIMenuItem"
 import { useSelector } from 'react-redux'
-import { Prev } from "react-bootstrap/esm/PageItem";
 
 const LeftMenu = (props) => {
     const privileges = useSelector((state) => state.api.loggedInUser?.privileges)

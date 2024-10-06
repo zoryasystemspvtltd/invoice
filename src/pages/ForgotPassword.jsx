@@ -1,29 +1,26 @@
-import { useState } from "react";
-import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from "react-router-dom";
+import { Col, Form, Row } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import logo from '../assets/images/logo.png';
 import ICarousel from "./common/ICarousel";
-import { forgotPassword } from "../store/api-db";
-import { useDispatch, useSelector } from 'react-redux';
+
 
 const ForgotPassword = () => {
-    const module = 'identity'
-    const navigate = useNavigate();
-    const [email, setEmail] = useState("");
-    const [notice, setNotice] = useState("");
-    const dispatch = useDispatch();
+    // const module = 'identity'
+    // const [email, setEmail] = useState("");
+    // const [notice, setNotice] = useState("");
+    // const dispatch = useDispatch();
 
-    const handlePasswordReset = async () => {
-        if (email === "") {
-            setNotice("Invalid email.");
-        }
-        dispatch(forgotPassword({ module: module, data: { email: email } }));
-    };
+    // const handlePasswordReset = async () => {
+    //     if (email === "") {
+    //         setNotice("Invalid email.");
+    //     }
+    //     dispatch(forgotPassword({ module: module, data: { email: email } }));
+    // };
 
-    const resetPassword = async (e) => {
-        e.preventDefault();
-        handlePasswordReset();
-    }
+    // const resetPassword = async (e) => {
+    //     e.preventDefault();
+    //     handlePasswordReset();
+    // }
 
     return (
         <div className="app-login app-theme-white body-tabs-shadow">

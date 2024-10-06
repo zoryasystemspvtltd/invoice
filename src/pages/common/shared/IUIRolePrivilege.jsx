@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getData, setModuleDataItem } from '../../../store/api-db';
-import { useDispatch, useSelector } from 'react-redux'
-import { Button, Col, Row, Form, Container } from "react-bootstrap";
+import { Form} from "react-bootstrap";
 import IUIPrivileges from './IUIPrivileges';
 
 const IUIRolePrivilege = (props) => {
 
-    const module = "privilege"
     const [value, setValue] = useState(props?.value)
     
     // There is no server module privilege - this is fixed 
@@ -32,15 +29,6 @@ const IUIRolePrivilege = (props) => {
     const modulePrivileges = modules.map((item, index) => {
         return { id: index, name: item.name, text: item.text, items: privileges }
     })
-
-    const [schema, setSchema] = useState(modulePrivileges)
-    const dispatch = useDispatch();
-
-
-    useEffect(() => {
-        const pageOptions = { recordPerPage: 0 }
-        //dispatch(getData({ module: module, options: pageOptions }));
-    }, []);
 
     useEffect(() => {
         if (props.value && props.value.length > 0) {

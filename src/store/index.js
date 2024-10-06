@@ -1,6 +1,5 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
 import apiReducer from "./api-db"
-import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist'
 import storageSession from 'redux-persist/lib/storage/session'
 
