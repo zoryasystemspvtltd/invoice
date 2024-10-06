@@ -42,11 +42,13 @@ const IUIPage = (props) => {
 
     useEffect(() => {
         const modulePrivileges = loggedInUser?.privileges?.filter(p => p.module === module)?.map(p => p.name);
-        let access = {};
-        modulePrivileges.forEach(p => {
-            access = { ...access, ...{ [p]: true } }
-        })
-        setPrivileges(access)
+        if(modulePrivileges){
+            let access = {};
+            modulePrivileges.forEach(p => {
+                access = { ...access, ...{ [p]: true } }
+            })
+            setPrivileges(access)
+        }
     }, [loggedInUser, module]);
 
     useEffect(() => {
