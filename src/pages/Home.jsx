@@ -1,9 +1,10 @@
-import {  Navigate, useNavigate } from "react-router-dom";
+import {  Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "../provider/authProvider";
 import { useEffect } from "react";
 
 const Home = () => {
     const { token ,setToken } = useAuth();
+    const [searchParams, setSearchParams] = useSearchParams()
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -12,6 +13,13 @@ const Home = () => {
             navigate("/", { replace: true });
         }
     }, [token]);
+
+    useEffect(() => {
+            const r = searchParams.get('r')
+            if(r){
+                navigate(-2);
+            }
+        },[searchParams]);
 
     return (
         <>
