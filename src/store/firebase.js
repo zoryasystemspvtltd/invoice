@@ -9,13 +9,13 @@ import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider, getRe
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCYu5sETcxlAmxAYhBVroOOEuJhkjUvNlI",
-  authDomain: "zorya-invoice-ilab.firebaseapp.com",
-  projectId: "zorya-invoice-ilab",
-  storageBucket: "zorya-invoice-ilab.appspot.com",
-  messagingSenderId: "279700886518",
-  appId: "1:279700886518:web:e7e3f48b5d066bb90f2dd7",
-  measurementId: "G-TWD7JR0M6R"
+  apiKey: "AIzaSyAtOoqGqgAqoS6C90NkPQVo7I4NXZ8uv40",
+  authDomain: "zorya-invoice.firebaseapp.com",
+  projectId: "zorya-invoice",
+  storageBucket: "zorya-invoice.appspot.com",
+  messagingSenderId: "464863360892",
+  appId: "1:464863360892:web:4cb31172051b2a5f1056f9",
+  measurementId: "G-JKKXV4LMWF"
 };
 
 // Initialize Firebase
