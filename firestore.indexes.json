@@ -71,7 +71,7 @@
       ]
     },
     {
-      "collectionGroup": "invoiceItem#uWCFFBOL1NoNDLBKFgI4",
+      "collectionGroup": "invoiceItem",
       "queryScope": "COLLECTION",
       "fields": [
         {
