@@ -14,7 +14,7 @@ export const ListInvoice = () => {
         fields: [
             { text: 'Invoice ID', field: 'name', type: 'link', sorting: true, searching: true },
             { text: 'Customer Name', field: 'customerName', type: 'text', sorting: true, searching: true },
-            { text: 'Phone No.', field: 'phoneNo', type: 'phone', sorting: true, searching: true },
+            { text: 'Phone No.', field: 'phoneNo', type: 'text', sorting: true, searching: true },
             { text: 'Payment Mode', field: 'paymentMode', type: 'text', sorting: true, searching: true },
             { text: 'Invoice Date', field: 'invoiceDate', type: 'date', sorting: true, searching: true },
         ]
@@ -71,16 +71,16 @@ export const ViewInvoice = () => {
                             adding: true,
 
                             fields: [
-                                { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 3 },
-                                { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 3 },
-                                { text: 'Weight(gms)', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 3 },
-                                { text: 'Rate[per Item]/Date', field: 'rate', fieldIcon: 'star', placeholder: 'Rate here...', type: 'text', required: true, width: 3 },
-                                { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here..', type: 'text', required: true, width: 3 },
-                                { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 3 },
-                                { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 3 },
-                                { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 3 },
-                                { text: 'Additional Charge', field: 'addCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 3 },
-                                { text: 'H. Mark Charge', field: 'hmCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 3 },
+                                { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 12 },
+                                { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 12 },
+                                { text: 'Weight(gms)', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 12 },
+                                { text: 'Rate[per Item]/Date', field: 'rate', fieldIcon: 'star', placeholder: 'Rate here...', type: 'text', required: true, width: 12 },
+                                { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here..', type: 'text', required: true, width: 12 },
+                                { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 12 },
+                                { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 12 },
+                                { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 12 },
+                                { text: 'Additional Charge', field: 'addCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 12 },
+                                { text: 'H. Mark Charge', field: 'hmCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 12 },
                             ]
                         },
                     }

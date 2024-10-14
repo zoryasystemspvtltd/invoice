@@ -41,16 +41,22 @@ export const ViewInvoiceItem = () => {
             {
                 type: "area", width: 12
                 , fields: [
+                    {
+                        text: 'Invoice No', field: 'invoiceId', fieldIcon: 'star', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
+                        schema: {
+                            module: 'invoice'
+                        }
+                    },
                     { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 6 },
                     { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'date', required: true, width: 6 },
                     { text: 'Weight', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
-                    { text: 'Rate Per Item', field: 'rpt', fieldIcon: 'star', placeholder: 'Rate per item here...', type: 'text', required: true, width: 6 },
+                    { text: 'Rate Per Item', field: 'rate', fieldIcon: 'star', placeholder: 'Rate per item here...', type: 'text', required: true, width: 6 },
                     { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'Hsn here..', type: 'text', required: true, width: 6 },
-                    { text: 'Sgst', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'Cgst', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'Making Charge', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'Add Charge', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'H M Charge', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Sgst', field: 'sgst', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Cgst', field: 'cgst', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Add Charge', field: 'addCharge', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'H M Charge', field: 'hmCharge', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
                     
                 ]
             },
@@ -108,13 +114,13 @@ export const EditInvoiceItem = () => {
                     { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 6 },
                     { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'date', required: true, width: 6 },
                     { text: 'Weight', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
-                    { text: 'Rate Per Item', field: 'rpt', fieldIcon: 'star', placeholder: 'Rate per item here...', type: 'text', required: true, width: 6 },
+                    { text: 'Rate Per Item', field: 'rate', fieldIcon: 'star', placeholder: 'Rate per item here...', type: 'text', required: true, width: 6 },
                     { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'Hsn here..', type: 'text', required: true, width: 6 },
-                    { text: 'Sgst', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'Cgst', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'Making Charge', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'Add Charge', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
-                    { text: 'H M Charge', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 6 },
+                    { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 6 },
+                    { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Additional Charge', field: 'addCharge', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'H M Charge', field: 'hmCharge', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
                     
                 ]
             },

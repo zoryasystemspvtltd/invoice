@@ -9,6 +9,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import IUIModuleMessage from './shared/IUIModuleMessage';
 import IUILookUp from './shared/IUILookUp'
+import IUIListPage from './IUIListPage';
 
 const IUIListRelation = (props) => {
     const schema = props.schema;
@@ -33,7 +34,7 @@ const IUIListRelation = (props) => {
             const pageOptions = {
                 ...dataSet?.options
                 , recordPerPage: pageLength
-                , searchCondition: newBaseFilter
+                , filters: newBaseFilter
             }
             dispatch(getData({ module: module, options: pageOptions }));
             console.log(baseFilter)
@@ -101,18 +102,6 @@ const IUIListRelation = (props) => {
                         <div className="card-body">
                             <Row>
                                 <Col md={8} className='mb-3'>
-                                    <div className="app-page-title">
-                                        <div className="page-title-heading"> {schema?.title}</div>
-                                    </div>
-                                    {schema.adding &&
-                                        <Button
-                                            variant="contained"
-                                            className="btn-wide btn-pill btn-shadow btn-hover-shine btn btn-primary btn-sm"
-                                            onClick={() => navigate(`/${schema.module}s/add`)}
-                                        >
-                                            Add New
-                                        </Button>
-                                    }
                                     <IUIModuleMessage schema={props.schema} />
                                 </Col>
                                 <Col md={4}>
@@ -143,12 +132,7 @@ const IUIListRelation = (props) => {
                                     <Table responsive>
                                         <thead>
                                             <tr>
-                                                {schema?.editing &&
-                                                    <th>
-                                                        <button type="submit" className="btn btn-link text-white">#</button>
 
-                                                    </th>
-                                                }
                                                 {schema?.fields?.map((fld, f) => (
                                                     <th key={f}>
                                                         {fld.sorting &&
@@ -170,6 +154,12 @@ const IUIListRelation = (props) => {
                                                             </button>}
                                                     </th>
                                                 ))}
+                                                {schema?.editing &&
+                                                    <th>
+                                                        <button type="submit" className="btn btn-link text-white">#</button>
+
+                                                    </th>
+                                                }
                                             </tr>
                                         </thead>
                                         {
@@ -178,11 +168,7 @@ const IUIListRelation = (props) => {
                                                 {
                                                     dataSet?.items?.map((item, i) => (
                                                         <tr key={i}>
-                                                            {schema?.editing &&
-                                                                <td width={10}>
-                                                                    <Link to={`${item.id}/edit`}><i className="fa-solid fa-pencil"></i></Link>
-                                                                </td>
-                                                            }
+
                                                             {schema?.fields?.map((fld, f) => (
                                                                 <td key={f}>
                                                                     {fld.type === 'link' &&
@@ -200,11 +186,21 @@ const IUIListRelation = (props) => {
                                                                     }
                                                                 </td>
                                                             ))}
+                                                            {schema?.editing &&
+                                                                <td width={10}>
+                                                                    <Link to={`${item.id}/edit`}><i className="fa-solid fa-pencil"></i></Link>
+                                                                </td>
+                                                            }
                                                         </tr>
                                                     ))
                                                 }
                                             </tbody>
                                         }
+                                        {schema.adding &&
+
+                                            <IUIListPage schema={schema} />
+                                        }
+
                                         {schema.paging &&
                                             <tfoot>
                                                 <tr>
