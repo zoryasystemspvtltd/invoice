@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
-import { db, auth} from "./firebase";
+import { db, auth } from "./firebase";
 import { collection, addDoc, updateDoc, doc, getDoc, getDocs, query, where, limit, orderBy, and, or, getCountFromServer } from "firebase/firestore";
 
 const application = 'DUMMY';
@@ -124,7 +124,9 @@ api.getFilters = ({ or, ...rest }) => {
 }
 
 api.getData = async (action) => {
-    const dataRef = collection(db, action.module);
+    let option = { ...action.options }
+    option.module = action.module.split('#')[0];
+    const dataRef = collection(db, option.module);
     // < less than
     // <= less than or equal to
     // == equal to
@@ -136,8 +138,7 @@ api.getData = async (action) => {
     // in
     // not-in
 
-    let option = { ...action.option }
-    option.module = action.module;
+    
     if (!option.status) {
         option.status = status; //TODO Public Shared etc...
     }
@@ -145,7 +146,9 @@ api.getData = async (action) => {
         option.search = option?.searchCondition?.value;
         option.filters = api.getFilters(option?.searchCondition);
     }
-
+    if (option?.filters) {
+        option.filters = api.getFilters(option?.filters);
+    }
     option.sortDirection = option.sortDirection ? 'asc' : 'desc'
 
     if (!option.sortColumnName) {
@@ -157,11 +160,19 @@ api.getData = async (action) => {
     let filters = {}
 
     if (option.filters) {
-        filters = or(where("name", ">=", option.search))
-
-        for (let i = 0; i < option.filters.length; i++) {
-            filters._queryConstraints.push(where(option.filters[i].name, ">=", option.filters[i].value))
+        if (option.search) {
+            filters = or(where("name", ">=", option.search))
+            for (let i = 0; i < option.filters.length; i++) {
+                filters._queryConstraints.push(where(option.filters[i].name, ">=", option.filters[i].value))
+            }
         }
+        else{
+            filters = where(option.filters[0].name, "==", option.filters[0].value)
+            for (let i = 1; i < option.filters.length; i++) {
+                filters._queryConstraints.push(where(option.filters[i].name, ">=", option.filters[i].value))
+            }
+        }
+        
     }
 
     //const email = auth.user.email;

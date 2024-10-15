@@ -103,21 +103,26 @@ const IUIPageElement = (props) => {
                         {(!fld.type || fld.type === 'text' || fld.type === 'number') &&
                             <>
                                 <Form.Group className="position-relative mb-3">
-                                    <Form.Label htmlFor={fld.field} className="fw-bold">
-                                        {fld.text}
-                                        {fld.required &&
-                                            <span className="text-danger">*</span>
-                                        }
-                                    </Form.Label>
-                                    <InputGroup>
-                                        <InputGroup.Text id={`${fld.field}_input_icon`}>
-                                            {
-                                                (fld.fieldIcon) ?
-                                                    <i className={`fa-solid fa-${fld.fieldIcon}`}></i>
-                                                    :
-                                                    <i className={`fa-solid fa-star`}></i>
+                                    {!props?.inline &&
+                                        <Form.Label htmlFor={fld.field} className="fw-bold">
+                                            {fld.text}
+                                            {fld.required &&
+                                                <span className="text-danger">*</span>
                                             }
-                                        </InputGroup.Text>
+                                        </Form.Label>
+                                    }
+
+                                    <InputGroup>
+                                        {!props?.inline &&
+                                            <InputGroup.Text id={`${fld.field}_input_icon`}>
+                                                {
+                                                    (fld.fieldIcon) ?
+                                                        <i className={`fa-solid fa-${fld.fieldIcon}`}></i>
+                                                        :
+                                                        <i className={`fa-solid fa-star`}></i>
+                                                }
+                                            </InputGroup.Text>
+                                        }
                                         <Form.Control type="text"
                                             name={fld.field}
                                             id={fld.field}
