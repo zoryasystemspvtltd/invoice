@@ -60,13 +60,10 @@ export const ViewInvoice = () => {
                 type: "area", width: 12
                 , fields: [
                     {
-                        type: 'module-relation',
+                        type: 'module-relation-inline',
                         schema: {
-                            module: 'invoiceItem',
-                            relationKey: "invoiceId",
                             title: 'Invoice Items',
-                            paging: false,
-                            searching: false,
+                            field: 'items',
                             editing: true,
                             adding: true,
 
@@ -79,8 +76,8 @@ export const ViewInvoice = () => {
                                 { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 12 },
                                 { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 12 },
                                 { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 12 },
-                                { text: 'Additional Charge', field: 'addCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 12 },
-                                { text: 'H. Mark Charge', field: 'hmCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 12 },
+                                { text: 'Additional Charge', field: 'additinalCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 12 },
+                                { text: 'H. Mark Charge', field: 'hallmarkCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 12 },
                             ]
                         },
                     }
@@ -121,6 +118,33 @@ export const EditInvoice = () => {
                     { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
+            {
+                type: "area", width: 12
+                , fields: [
+                    {
+                        type: 'module-relation-inline',
+                        schema: {
+                            title: 'Invoice Items',
+                            field: 'items',
+                            editing: true,
+                            adding: true,
+
+                            fields: [
+                                { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 12 },
+                                { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 12 },
+                                { text: 'Weight(gms)', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 12 },
+                                { text: 'Rate[per Item]/Date', field: 'rate', fieldIcon: 'star', placeholder: 'Rate here...', type: 'text', required: true, width: 12 },
+                                { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here..', type: 'text', required: true, width: 12 },
+                                { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 12 },
+                                { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 12 },
+                                { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 12 },
+                                { text: 'Additional Charge', field: 'additinalCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 12 },
+                                { text: 'H. Mark Charge', field: 'hallmarkCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 12 },
+                            ]
+                        },
+                    }
+                ]
+            }
         ]
     }
 
@@ -187,8 +211,8 @@ export const AddInvoiceItem = () => {
                     { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 3 },
                     { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 3 },
                     { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 3 },
-                    { text: 'Additional Charge', field: 'addCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 3 },
-                    { text: 'H. Mark Charge', field: 'hmCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 3 },
+                    { text: 'Additional Charge', field: 'additinalCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 3 },
+                    { text: 'H. Mark Charge', field: 'hallmarkCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 3 },
                 ]
             },
 
