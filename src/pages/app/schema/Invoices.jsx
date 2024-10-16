@@ -1,4 +1,5 @@
 
+import { type } from "@testing-library/user-event/dist/type";
 import IUIList from "../../common/IUIList";
 import IUIPage from "../../common/IUIPage"
 
@@ -61,23 +62,25 @@ export const ViewInvoice = () => {
                 , fields: [
                     {
                         type: 'module-relation-inline',
+                        field: 'items',
                         schema: {
                             title: 'Invoice Items',
-                            field: 'items',
-                            editing: true,
-                            adding: true,
+                            editing: false,
+                            adding: false,
+
 
                             fields: [
-                                { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 12 },
-                                { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 12 },
-                                { text: 'Weight(gms)', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 12 },
-                                { text: 'Rate[per Item]/Date', field: 'rate', fieldIcon: 'star', placeholder: 'Rate here...', type: 'text', required: true, width: 12 },
-                                { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here..', type: 'text', required: true, width: 12 },
-                                { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 12 },
-                                { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 12 },
-                                { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 12 },
-                                { text: 'Additional Charge', field: 'additinalCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 12 },
-                                { text: 'H. Mark Charge', field: 'hallmarkCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 12 },
+                                { field: 'id', type: 'hidden-filter' },
+                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
+                                { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
+                                { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },
+                                { text: 'HSN Code', field: 'hsnCode', type: 'text', required: true, width: 12 },
+                                { text: 'SGST', field: 'sgst', type: 'text', required: false, width: 12 },
+                                { text: 'CGST', field: 'cgst', type: 'text', required: false, width: 12 },
+                                { text: 'Making Charge', field: 'makingCharge', type: 'text', required: true, width: 12 },
+                                { text: 'Additional Charge', field: 'additinalCharge', type: 'text', required: true, width: 12 },
+                                { text: 'H. Mark Charge', field: 'hallmarkCharge', type: 'text', required: true, width: 12 },
                             ]
                         },
                     }
@@ -123,23 +126,25 @@ export const EditInvoice = () => {
                 , fields: [
                     {
                         type: 'module-relation-inline',
+                        field: 'items',
                         schema: {
                             title: 'Invoice Items',
-                            field: 'items',
                             editing: true,
                             adding: true,
 
+
                             fields: [
-                                { text: 'Item', field: 'item', fieldIcon: 'star', placeholder: 'Item here...', type: 'text', required: true, width: 12 },
-                                { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 12 },
-                                { text: 'Weight(gms)', field: 'weight', fieldIcon: 'star', placeholder: 'Weight here...', type: 'text', required: true, width: 12 },
-                                { text: 'Rate[per Item]/Date', field: 'rate', fieldIcon: 'star', placeholder: 'Rate here...', type: 'text', required: true, width: 12 },
-                                { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here..', type: 'text', required: true, width: 12 },
-                                { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'SGST here...', type: 'text', required: false, width: 12 },
-                                { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'CGST here...', type: 'text', required: false, width: 12 },
-                                { text: 'Making Charge', field: 'makingCharge', fieldIcon: 'star', placeholder: 'Making Charge...', type: 'text', required: true, width: 12 },
-                                { text: 'Additional Charge', field: 'additinalCharge', fieldIcon: 'star', placeholder: 'Additional Charge...', type: 'text', required: true, width: 12 },
-                                { text: 'H. Mark Charge', field: 'hallmarkCharge', fieldIcon: 'star', placeholder: 'H. Mark Charge...', type: 'text', required: true, width: 12 },
+                                { field: 'id', type: 'hidden-filter' },
+                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
+                                { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
+                                { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },
+                                { text: 'HSN Code', field: 'hsnCode', type: 'text', required: true, width: 12 },
+                                { text: 'SGST', field: 'sgst', type: 'text', required: false, width: 12 },
+                                { text: 'CGST', field: 'cgst', type: 'text', required: false, width: 12 },
+                                { text: 'Making Charge', field: 'makingCharge', type: 'text', required: true, width: 12 },
+                                { text: 'Additional Charge', field: 'additinalCharge', type: 'text', required: true, width: 12 },
+                                { text: 'H. Mark Charge', field: 'hallmarkCharge', type: 'text', required: true, width: 12 },
                             ]
                         },
                     }
@@ -180,7 +185,35 @@ export const AddInvoice = () => {
                     { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
+            {
+                type: "area", width: 12
+                , fields: [
+                    {
+                        type: 'module-relation-inline',
+                        field: 'items',
+                        schema: {
+                            title: 'Invoice Items',
+                            editing: true,
+                            adding: true,
 
+
+                            fields: [
+                                { field: 'id', type: 'hidden-filter' },
+                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
+                                { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
+                                { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },
+                                { text: 'HSN Code', field: 'hsnCode', type: 'text', required: true, width: 12 },
+                                { text: 'SGST', field: 'sgst', type: 'text', required: false, width: 12 },
+                                { text: 'CGST', field: 'cgst', type: 'text', required: false, width: 12 },
+                                { text: 'Making Charge', field: 'makingCharge', type: 'text', required: true, width: 12 },
+                                { text: 'Additional Charge', field: 'additinalCharge', type: 'text', required: true, width: 12 },
+                                { text: 'H. Mark Charge', field: 'hallmarkCharge', type: 'text', required: true, width: 12 },
+                            ]
+                        },
+                    }
+                ]
+            }
 
 
 
