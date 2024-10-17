@@ -9,7 +9,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import IUIModuleMessage from './shared/IUIModuleMessage';
 import IUILookUp from './shared/IUILookUp'
-import IUIListPage from './IUIListPage';
+import IUIListPage from './IUIPageInline';
 
 const IUIListRelation = (props) => {
     const schema = props.schema;

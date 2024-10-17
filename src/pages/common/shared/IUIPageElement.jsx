@@ -9,6 +9,7 @@ import IUIUserRoleEdit from './IUIUserRole';
 import IUIListRelation from '../IUIListRelation';
 import IUIResetPasswordElement from '../../ResetUserPassword';
 import IUIHiddenState from './IUIHiddenState';
+import IUIListInline from '../IUIListInline';
 
 const IUIPageElement = (props) => {
     // Properties
@@ -339,6 +340,21 @@ const IUIPageElement = (props) => {
                             <>
                                 <Form.Group className="position-relative">
                                     <IUIListRelation schema={fld.schema} parentId={data.id} />
+                                </Form.Group>
+                                <br />
+                            </>
+                        }
+                        {fld.type === 'module-relation-inline' &&
+                            <>
+                                <Form.Group className="position-relative">
+                                    <IUIListInline
+                                        value={data[fld.field]}
+                                        // className={dirty ? (errors[fld.field] ? "is-invalid" : "is-valid") : ""}
+                                        id={fld.field}
+                                        schema={fld.schema}
+                                        onChange={handleChange}
+                                        readonly={props.readonly || fld.readonly || false}
+                                    />
                                 </Form.Group>
                                 <br />
                             </>
