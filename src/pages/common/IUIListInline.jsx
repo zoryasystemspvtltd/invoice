@@ -25,20 +25,33 @@ const IUIListInline = (props) => {
         if (item) {
             const index = value?.findIndex(it => `${it.id}` === `${item.id}`)
 
-            if (index > -1) {// Edit
-                const items = [
-                    ...value?.slice(0, index), // everything before array
-                    {
-                        ...value[index],
-                        ...item
-                    },
-                    ...value?.slice(index + 1), // everything after array
-                ]
-                setValue(items)
+            if (index > -1) {
+                if (item.deleted) { // Delete
+                    const items = [
+                        ...value?.slice(0, index), // everything before array
+                        ...value?.slice(index + 1), // everything after array
+                    ]
+                    setValue(items)
 
-                const event = { target: { id: props?.id, value: items }, preventDefault: function () { } }
-                if (props.onChange) {
-                    props.onChange(event);
+                    const event = { target: { id: props?.id, value: items }, preventDefault: function () { } }
+                    if (props.onChange) {
+                        props.onChange(event);
+                    }
+                } else {// Edit 
+                    const items = [
+                        ...value?.slice(0, index), // everything before array
+                        {
+                            ...value[index],
+                            ...item
+                        },
+                        ...value?.slice(index + 1), // everything after array
+                    ]
+                    setValue(items)
+
+                    const event = { target: { id: props?.id, value: items }, preventDefault: function () { } }
+                    if (props.onChange) {
+                        props.onChange(event);
+                    }
                 }
 
             } else { // Add
@@ -103,7 +116,7 @@ const IUIListInline = (props) => {
                                     <IUIPageInline
                                         id={value ? value.length + 1 : 1}
                                         schema={schema}
-                                        value={{ id: value ? value.length + 1 : 1,mode:'add' }}
+                                        value={{ id: value ? value.length + 1 : 1, mode: 'add' }}
                                         onChange={handleChange}
                                     />
                                 </tr>

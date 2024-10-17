@@ -58,28 +58,53 @@ const IUIPageInline = (props) => {
 
     const savePageValue = (e) => {
         e.preventDefault();
-        if (!props?.readonly) {
-            setDirty(true);
-            const error = validate(value, schema?.fields)
-            setErrors(error);
-            if (Object.keys(error).length === 0) {
-                if (!value)
-                    return
+        setDirty(true);
+        const error = validate(value, schema?.fields)
+        setErrors(error);
+        if (Object.keys(error).length === 0) {
+            if (!value)
+                return
 
-                const event = { target: { id: props?.id, value: value }, preventDefault: function () { } }
-                if (props.onChange) {
-                    props.onChange(event);
-                }
+            const item = { ...value, mode: null, readonly: null }
+            const event = { target: { id: props?.id, value: item }, preventDefault: function () { } }
+            if (props.onChange) {
+                props.onChange(event);
             }
+
+            setDirty(false);
+            setErrors({});
         }
     };
 
-    const setMode = (e,mode) => {
+    const deletePageValue = (e) => {
         e.preventDefault();
-        const item = { ...value, ...{ mode: mode, readonly: mode !== 'add' } }
-        setValue(item);
+        const event = { target: { id: props?.id, value: { id: value.id, deleted: true } }, preventDefault: function () { } }
+        if (props.onChange) {
+            props.onChange(event);
+        }
+    }
+
+    const cancelPageValue = (e) =>{
+        e.preventDefault();
+        const event = { target: { id: props?.id, value: { id: value.id} }, preventDefault: function () { } }
+        if (props.onChange) {
+            props.onChange(event);
+        }
+    }
+
+    const setMode = (e, mode) => {
+        e.preventDefault();
         setDirty(false)
-        setErrors(null)
+        setErrors({})
+        const item = {
+            ...value,
+            ...{
+                mode: mode,
+                readonly: (mode !== 'add' && mode !== 'edit')
+            }
+        }
+        setValue(item);
+
     }
 
     return (
@@ -108,14 +133,22 @@ const IUIPageInline = (props) => {
                 {schema?.editing &&
 
                     <div className="input-group">
-                        {value?.mode === 'add' &&
+                        {!value?.mode &&
                             <>
-                                < button className="btn" onClick={savePageValue}><i className="fa-solid fa-save" title='Save'></i></button>
-                                < button className="btn" onClick={e=>setMode(e,null)}><i className="fa-solid fa-cancel" title='Cancel'></i></button>
+                                < button className="btn btn-outline-primary" onClick={e => setMode(e, 'edit')}><i className="fa-solid fa-edit" title='Edit'></i></button>
+                                < button className="btn btn-outline-danger" onClick={deletePageValue}><i className="fa-solid fa-trash" title='Delete'></i></button>
                             </>
                         }
-                        {value?.mode !== 'add' &&
-                            < button className="btn" onClick={e=>setMode(e,'add')}><i className="fa-solid fa-edit" title='Edit'></i></button>
+                        {value?.mode === 'add' &&
+                            <>
+                                < button className="btn btn-outline-primary" onClick={savePageValue}><i className="fa-solid fa-save" title='Save'></i></button>
+                            </>
+                        }
+                        {value?.mode === 'edit' &&
+                            <>
+                                < button className="btn btn-outline-primary" onClick={savePageValue}><i className="fa-solid fa-save" title='Save'></i></button>
+                                < button className="btn btn-outline-secondary" onClick={cancelPageValue}><i className="fa-solid fa-cancel" title='Cancel'></i></button>
+                            </>
                         }
                     </div>
                 }
