@@ -70,7 +70,9 @@ export const ViewInvoice = () => {
 
 
                             fields: [
-                                { field: 'id', type: 'hidden-filter' },
+                                { field: 'id', type: 'hidden-filter',schema: {
+                                    module: 'invoice'
+                                } },
                                 { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
@@ -134,7 +136,9 @@ export const EditInvoice = () => {
 
 
                             fields: [
-                                { field: 'id', type: 'hidden-filter' },
+                                { field: 'id', type: 'hidden-filter',schema: {
+                                    module: 'invoice'
+                                } },
                                 { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
@@ -198,7 +202,9 @@ export const AddInvoice = () => {
 
 
                             fields: [
-                                { field: 'id', type: 'hidden-filter' },
+                                { field: 'id', type: 'hidden-filter',schema: {
+                                    module: 'invoice'
+                                } },
                                 { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
