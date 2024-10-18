@@ -41,7 +41,7 @@ export const ViewSupplierPurchase = () => {
                             module: 'supplier', //Pass either module to be fetched data dynamically
                         }
                      },
-                    { text: 'Material Type', field: 'materialType', fieldIcon: 'star', placeholder: 'Material Type here...', type: 'lookup', required: true, width: 4,
+                    { text: 'Material Type', field: 'materialType', fieldIcon: 'sitemap', placeholder: 'Material Type here...', type: 'lookup', required: true, width: 4,
                         schema: {
                             //module:'department', Pass either module to be fetched data dynamically
                             items: [ // or use items for fixed value
@@ -50,7 +50,7 @@ export const ViewSupplierPurchase = () => {
                             ]
                         }
                      },
-                    { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 4 },
+                    { text: 'Quantity', field: 'quantity', fieldIcon: 'scale-balanced', placeholder: 'Quantity here...', type: 'text', required: true, width: 4 },
                 ]
             },
         ]
@@ -73,7 +73,7 @@ export const EditSupplierPurchase = () => {
                             module: 'supplier', //Pass either module to be fetched data dynamically
                         }
                      },
-                    { text: 'Material Type', field: 'materialType', fieldIcon: 'star', placeholder: 'Material Type here...', type: 'lookup', required: true, width: 4,
+                    { text: 'Material Type', field: 'materialType', fieldIcon: 'sitemap', placeholder: 'Material Type here...', type: 'lookup', required: true, width: 4,
                         schema: {
                             //module:'department', Pass either module to be fetched data dynamically
                             items: [ // or use items for fixed value
@@ -82,7 +82,7 @@ export const EditSupplierPurchase = () => {
                             ]
                         }
                      },
-                    { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 4 },
+                    { text: 'Quantity', field: 'quantity', fieldIcon: 'scale-balanced', placeholder: 'Quantity here...', type: 'text', required: true, width: 4 },
                 ]
             },
         ]
@@ -105,7 +105,7 @@ export const AddSupplierPurchase = () => {
                             module: 'supplier', //Pass either module to be fetched data dynamically
                         }
                      },
-                    { text: 'Material Type', field: 'materialType', fieldIcon: 'star', placeholder: 'Material Type here...', type: 'lookup', required: true, width: 4,
+                    { text: 'Material Type', field: 'materialType', fieldIcon: 'sitemap', placeholder: 'Material Type here...', type: 'lookup', required: true, width: 4,
                         schema: {
                             //module:'department', Pass either module to be fetched data dynamically
                             items: [ // or use items for fixed value
@@ -114,7 +114,7 @@ export const AddSupplierPurchase = () => {
                             ]
                         }
                      },
-                    { text: 'Quantity', field: 'quantity', fieldIcon: 'star', placeholder: 'Quantity here...', type: 'text', required: true, width: 4 },
+                    { text: 'Quantity', field: 'quantity', fieldIcon: 'scale-balanced', placeholder: 'Quantity here...', type: 'text', required: true, width: 4 },
                 ]
             },
         ]

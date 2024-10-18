@@ -38,10 +38,10 @@ export const ViewProduct = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Product Name', field: 'productName', fieldIcon: 'star', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Weight', field: 'weight', fieldIcon: 'balance', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
+                    { text: 'Product Name', field: 'productName', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                     {
-                        text: 'Type', field: 'type', fieldIcon: 'star', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Type', field: 'type', fieldIcon: 'sitemap', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [
                                 { name: 'Gold' },
@@ -50,11 +50,11 @@ export const ViewProduct = () => {
                         }
                     },
                     {
-                        text: 'Purity', field: 'purity', fieldIcon: 'star', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
+                        text: 'Purity', field: 'purity', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
                         schema: { module: 'purity' }
                     },
                     {
-                        text: 'Unit Type', field: 'unitType', fieldIcon: 'star', placeholder: 'Unit here..', type: 'lookup', required: true, width: 6,
+                        text: 'Unit Type', field: 'unitType', fieldIcon: 'weight-scale', placeholder: 'Unit here..', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Gram' },
@@ -66,12 +66,12 @@ export const ViewProduct = () => {
                         }
                     },
                     {
-                        text: 'Category Type', field: 'categoryType', fieldIcon: 'star', placeholder: 'Category Type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Category Type', field: 'categoryType', fieldIcon: 'sitemap', placeholder: 'Category Type here...', type: 'lookup', required: true, width: 6,
                         schema: { module: 'category' }
                     },
-                    { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here...', type: 'text', required: false, width: 6 },
+                    { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'keyboard', placeholder: 'HSN Code here...', type: 'text', required: false, width: 6 },
                     {
-                        text: 'Product Type', field: 'productType', fieldIcon: 'star', placeholder: 'Product Type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Product Type', field: 'productType', fieldIcon: 'sitemap', placeholder: 'Product Type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Finished Goods' }
@@ -79,7 +79,7 @@ export const ViewProduct = () => {
                         }
                     },
                     {
-                        text: 'Is Own Product', field: 'isOwnProduct', fieldIcon: 'star', placeholder: 'Select...', type: 'lookup', required: true, width: 6,
+                        text: 'Is Own Product', field: 'isOwnProduct', fieldIcon: 'clipboard-question', placeholder: 'Select...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Yes' },
@@ -87,8 +87,8 @@ export const ViewProduct = () => {
                             ]
                         }
                     },
-                    { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'Enter SGST here..', type: 'text', required: true, width: 6 },
-                    { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'Enter CGST here..', type: 'text', required: true, width: 6 },
+                    { text: 'SGST', field: 'sgst', fieldIcon: 'keyboard', placeholder: 'Enter SGST here..', type: 'text', required: true, width: 6 },
+                    { text: 'CGST', field: 'cgst', fieldIcon: 'keyboard', placeholder: 'Enter CGST here..', type: 'text', required: true, width: 6 },
                 ]
             },
         ]
@@ -106,10 +106,10 @@ export const EditProduct = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Product Name', field: 'productName', fieldIcon: 'star', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Weight', field: 'weight', fieldIcon: 'balance', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
+                    { text: 'Product Name', field: 'productName', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                     {
-                        text: 'Type', field: 'type', fieldIcon: 'star', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Type', field: 'type', fieldIcon: 'sitemap', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Gold' },
@@ -118,13 +118,13 @@ export const EditProduct = () => {
                         }
                     },
                     {
-                        text: 'Purity', field: 'purity', fieldIcon: 'star', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
+                        text: 'Purity', field: 'purity', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
                         schema: {
                             module: 'purity', //Pass either module to be fetched data dynamically
                         }
                     },
                     {
-                        text: 'Unit Type', field: 'unitType', fieldIcon: 'star', placeholder: 'Unit here..', type: 'lookup', required: true, width: 6,
+                        text: 'Unit Type', field: 'unitType', fieldIcon: 'weight-scale', placeholder: 'Unit here..', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Gram' },
@@ -136,14 +136,14 @@ export const EditProduct = () => {
                         }
                     },
                     {
-                        text: 'Category Type', field: 'categoryType', fieldIcon: 'star', placeholder: 'Category Type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Category Type', field: 'categoryType', fieldIcon: 'sitemap', placeholder: 'Category Type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             module: 'category', //Pass either module to be fetched data dynamically
                         }
                     },
-                    { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here...', type: 'text', required: false, width: 6 },
+                    { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'keyboard', placeholder: 'HSN Code here...', type: 'text', required: false, width: 6 },
                     {
-                        text: 'Product Type', field: 'productType', fieldIcon: 'star', placeholder: 'Product Type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Product Type', field: 'productType', fieldIcon: 'sitemap', placeholder: 'Product Type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Finished Goods' }
@@ -151,7 +151,7 @@ export const EditProduct = () => {
                         }
                     },
                     {
-                        text: 'Is Own Product', field: 'isOwnProduct', fieldIcon: 'star', placeholder: 'Select...', type: 'lookup', required: true, width: 6,
+                        text: 'Is Own Product', field: 'isOwnProduct', fieldIcon: 'clipboard-question', placeholder: 'Select...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Yes' },
@@ -159,8 +159,8 @@ export const EditProduct = () => {
                             ]
                         }
                     },
-                    { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'Enter SGST here..', type: 'text', required: true, width: 6 },
-                    { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'Enter CGST here..', type: 'text', required: true, width: 6 },
+                    { text: 'SGST', field: 'sgst', fieldIcon: 'keyboard', placeholder: 'Enter SGST here..', type: 'text', required: true, width: 6 },
+                    { text: 'CGST', field: 'cgst', fieldIcon: 'keyboard', placeholder: 'Enter CGST here..', type: 'text', required: true, width: 6 },
                 ]
             },
         ]
@@ -178,10 +178,10 @@ export const AddProduct = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Product Name', field: 'productName', fieldIcon: 'star', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Weight', field: 'weight', fieldIcon: 'balance', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
+                    { text: 'Product Name', field: 'productName', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                     {
-                        text: 'Type', field: 'type', fieldIcon: 'star', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Type', field: 'type', fieldIcon: 'sitemap', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Gold' },
@@ -190,11 +190,11 @@ export const AddProduct = () => {
                         }
                     },
                     {
-                        text: 'Purity', field: 'purity', fieldIcon: 'star', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
+                        text: 'Purity', field: 'purity', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select purity...', type: 'lookup', required: true, width: 6,
                         schema: { module: 'purity' }
                     },
                     {
-                        text: 'Unit Type', field: 'unitType', fieldIcon: 'star', placeholder: 'Unit here..', type: 'lookup', required: true, width: 6,
+                        text: 'Unit Type', field: 'unitType', fieldIcon: 'weight-scale', placeholder: 'Unit here..', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Gram' },
@@ -206,12 +206,12 @@ export const AddProduct = () => {
                         }
                     },
                     {
-                        text: 'Category Type', field: 'categoryType', fieldIcon: 'star', placeholder: 'Category Type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Category Type', field: 'categoryType', fieldIcon: 'sitemap', placeholder: 'Category Type here...', type: 'lookup', required: true, width: 6,
                         schema: { module: 'category' }
                     },
-                    { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'star', placeholder: 'HSN Code here...', type: 'text', required: false, width: 6 },
+                    { text: 'HSN Code', field: 'hsnCode', fieldIcon: 'keyboard', placeholder: 'HSN Code here...', type: 'text', required: false, width: 6 },
                     {
-                        text: 'Product Type', field: 'productType', fieldIcon: 'star', placeholder: 'Product Type here...', type: 'lookup', required: true, width: 6,
+                        text: 'Product Type', field: 'productType', fieldIcon: 'sitemap', placeholder: 'Product Type here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [ // or use items for fixed value
                                 { name: 'Finished Goods' }
@@ -219,7 +219,7 @@ export const AddProduct = () => {
                         }
                     },
                     {
-                        text: 'Is Own Product', field: 'isOwnProduct', fieldIcon: 'star', placeholder: 'Select...', type: 'lookup', required: true, width: 6,
+                        text: 'Is Own Product', field: 'isOwnProduct', fieldIcon: 'clipboard-question', placeholder: 'Select...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [
                                 { name: 'Yes' },
@@ -227,8 +227,8 @@ export const AddProduct = () => {
                             ]
                         }
                     },
-                    { text: 'SGST', field: 'sgst', fieldIcon: 'star', placeholder: 'Enter SGST here..', type: 'text', required: true, width: 6 },
-                    { text: 'CGST', field: 'cgst', fieldIcon: 'star', placeholder: 'Enter CGST here..', type: 'text', required: true, width: 6 },
+                    { text: 'SGST', field: 'sgst', fieldIcon: 'keyboard', placeholder: 'Enter SGST here..', type: 'text', required: true, width: 6 },
+                    { text: 'CGST', field: 'cgst', fieldIcon: 'keyboard', placeholder: 'Enter CGST here..', type: 'text', required: true, width: 6 },
                 ]
             },
         ]

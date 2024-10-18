@@ -52,12 +52,12 @@ export const ViewSupplier = () => {
                     //         ]
                     //     }
                     // },
-                    { text: 'GST No.', field: 'gstNo', fieldIcon: 'star', placeholder: 'GST Number here...', type: 'text', required: true, width: 6 },
+                    { text: 'GST No.', field: 'gstNo', fieldIcon: 'address-card', placeholder: 'GST Number here...', type: 'text', required: true, width: 6 },
                     { text: 'Supplier Name', field: 'name', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'text', required: true, width: 6 },
                     // { text: 'Last Name', field: 'lastName', fieldIcon: 'user', placeholder: 'Last Name here...', type: 'text', required: true, width: 6 },
                     { text: 'Phone Number', field: 'phoneNumber', fieldIcon: 'phone', placeholder: 'Phone Number here...', type: 'phone', required: false, width: 6 },
                     { text: 'Disable', field: 'disable', fieldIcon: 'user-slash', placeholder: 'Check to disable user...', type: 'check', required: false, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'location-dot', placeholder: 'Address here...', type: 'textarea', required: false, width: 12 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: false, width: 12 },
                 ]
             },
         ]

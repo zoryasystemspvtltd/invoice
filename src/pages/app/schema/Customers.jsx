@@ -33,10 +33,10 @@ export const ViewCustomer = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'star', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
-                    { text: 'PAN No.', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
+                    { text: 'PAN No.', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
         ]
@@ -54,10 +54,10 @@ export const EditCustomer = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'star', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'phone', required: true, width: 6 },
-                    { text: 'PAN No.', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'phone', required: true, width: 6 },
+                    { text: 'PAN No.', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
         ]

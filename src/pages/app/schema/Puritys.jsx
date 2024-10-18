@@ -33,8 +33,8 @@ export const ViewPurity = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Purity', field: 'name', fieldIcon: 'star', placeholder: 'Please enter purity...', type: 'text', required: true, width: 6 },
-                    { text: 'Weight', field: 'weight', fieldIcon: 'balance', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
+                    { text: 'Purity', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please enter purity...', type: 'text', required: true, width: 6 },
+                    { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                 ]
             },
         ]
@@ -52,8 +52,8 @@ export const EditPurity = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Purity', field: 'name', fieldIcon: 'star', placeholder: 'Please enter purity...', type: 'text', required: true, width: 6 },
-                    { text: 'Weight', field: 'weight', fieldIcon: 'balance', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
+                    { text: 'Purity', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please enter purity...', type: 'text', required: true, width: 6 },
+                    { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                 ]
             },
         ]
@@ -71,8 +71,8 @@ export const AddPurity = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Purity', field: 'name', fieldIcon: 'star', placeholder: 'Please enter purity...', type: 'text', required: true, width: 6 },
-                    { text: 'Weight', field: 'weight', fieldIcon: 'balance', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
+                    { text: 'Purity', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please enter purity...', type: 'text', required: true, width: 6 },
+                    { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                 ]
             },
         ]

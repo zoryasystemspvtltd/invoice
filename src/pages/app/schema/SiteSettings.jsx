@@ -34,15 +34,15 @@ export const ViewSiteSetting = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Company Name', field: 'companyName', fieldIcon: 'star', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Invoice Title', field: 'invoiceTitle', fieldIcon: 'star', placeholder: 'Invoice Title here...', type: 'text', required: true, width: 6 },
-                    { text: 'GST Number', field: 'gstNumber', fieldIcon: 'star', placeholder: 'GST number here...', type: 'text', required: true, width: 6 },
+                    { text: 'Company Name', field: 'companyName', fieldIcon: 'building', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Invoice Title', field: 'invoiceTitle', fieldIcon: 'grip-lines', placeholder: 'Invoice Title here...', type: 'text', required: true, width: 6 },
+                    { text: 'GST Number', field: 'gstNumber', fieldIcon: 'credit-card', placeholder: 'GST number here...', type: 'text', required: true, width: 6 },
                     { text: 'Sale Order Starts', field: 'saleOrderStarts', fieldIcon: 'star', placeholder: 'Sale order starts here...', type: 'text', required: true, width: 6 },
                     { text: 'Invoice Order Starts', field: 'invoiceOrderStarts', fieldIcon: 'star', placeholder: 'Invoice Order Starts here..', type: 'text', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
-                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'location-dot', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
-                    { text: 'Bank Details', field: 'bankDetails', fieldIcon: 'star', placeholder: 'Bank Details here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
+                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Bank Details', field: 'bankDetails', fieldIcon: 'building', placeholder: 'Bank Details here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
             {
@@ -68,15 +68,15 @@ export const EditSiteSetting = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Company Name', field: 'companyName', fieldIcon: 'star', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'Invoice Title', field: 'invoiceTitle', fieldIcon: 'star', placeholder: 'Invoice Title here...', type: 'text', required: true, width: 6 },
-                    { text: 'GST Number', field: 'gstNumber', fieldIcon: 'star', placeholder: 'GST number here...', type: 'text', required: true, width: 6 },
+                    { text: 'Company Name', field: 'companyName', fieldIcon: 'building', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Invoice Title', field: 'invoiceTitle', fieldIcon: 'grip-lines', placeholder: 'Invoice Title here...', type: 'text', required: true, width: 6 },
+                    { text: 'GST Number', field: 'gstNumber', fieldIcon: 'credit-card', placeholder: 'GST number here...', type: 'text', required: true, width: 6 },
                     { text: 'Sale Order Starts', field: 'saleOrderStarts', fieldIcon: 'star', placeholder: 'Sale order starts here...', type: 'text', required: true, width: 6 },
                     { text: 'Invoice Order Starts', field: 'invoiceOrderStarts', fieldIcon: 'star', placeholder: 'Invoice Order Starts here..', type: 'text', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
-                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'location-dot', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
-                    { text: 'Bank Details', field: 'bankDetails', fieldIcon: 'star', placeholder: 'Bank Details here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
+                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Bank Details', field: 'bankDetails', fieldIcon: 'building', placeholder: 'Bank Details here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
             {
