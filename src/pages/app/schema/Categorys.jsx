@@ -32,7 +32,7 @@ export const ViewCategory = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Category Name', field: 'name', fieldIcon: 'star', placeholder: 'Category Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Category Name', field: 'name', fieldIcon: 'sitemap', placeholder: 'Category Name here...', type: 'text', required: true, width: 6 },
                 ]
             },
         ]
@@ -50,7 +50,7 @@ export const EditCategory = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Category Name', field: 'name', fieldIcon: 'star', placeholder: 'Category Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Category Name', field: 'name', fieldIcon: 'sitemap', placeholder: 'Category Name here...', type: 'text', required: true, width: 6 },
                 ]
             },
         ]
@@ -68,7 +68,7 @@ export const AddCategory = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Category Name', field: 'name', fieldIcon: 'star', placeholder: 'Category Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Category Name', field: 'name', fieldIcon: 'sitemap', placeholder: 'Category Name here...', type: 'text', required: true, width: 6 },
                 ]
             },
         ]

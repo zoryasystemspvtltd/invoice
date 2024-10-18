@@ -37,14 +37,14 @@ export const ViewInvoice = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Invoice No.', field: 'name', fieldIcon: 'star', placeholder: 'Invoice ID here...', type: 'text', required: true, width: 6 },
-                    { text: 'Invoice Date', field: 'invoiceDate', fieldIcon: 'star', placeholder: 'Invoice Date here...', type: 'date', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
-                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'star', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'State', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Invoice No.', field: 'name', fieldIcon: 'receipt', placeholder: 'Invoice ID here...', type: 'text', required: true, width: 6 },
+                    { text: 'Invoice Date', field: 'invoiceDate', fieldIcon: 'calendar', placeholder: 'Invoice Date here...', type: 'date', required: true, width: 6 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
+                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'State', field: 'state', fieldIcon: 'location', placeholder: 'State here...', type: 'text', required: false, width: 6 },
                     {
-                        text: 'Payment Mode', field: 'paymentMode', fieldIcon: 'star', placeholder: 'Payment Mode here...', type: 'lookup', required: true, width: 6,
+                        text: 'Payment Mode', field: 'paymentMode', fieldIcon: 'wallet', placeholder: 'Payment Mode here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [
                                 { name: 'Cash' },
@@ -53,8 +53,8 @@ export const ViewInvoice = () => {
                             ]
                         }
                     },
-                    { text: 'Discount Amount', field: 'discountAmount', fieldIcon: 'star', placeholder: 'Discount Amount...', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Discount Amount', field: 'discountAmount', fieldIcon: 'percent', placeholder: 'Discount Amount...', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
             {
@@ -73,7 +73,13 @@ export const ViewInvoice = () => {
                                 { field: 'id', type: 'hidden-filter',schema: {
                                     module: 'invoice'
                                 } },
-                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                // { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                {
+                                    text: 'Item', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select item...', type: 'lookup', required: true, width: 6,
+                                    schema: {
+                                        module: 'product', 
+                                    }
+                                },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
                                 { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },
@@ -103,14 +109,14 @@ export const EditInvoice = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Invoice No.', field: 'name', fieldIcon: 'star', placeholder: 'Invoice ID here...', type: 'text', required: true, width: 6 },
-                    { text: 'Invoice Date', field: 'invoiceDate', fieldIcon: 'star', placeholder: 'Invoice Date here...', type: 'date', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
-                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'star', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'State', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Invoice No.', field: 'name', fieldIcon: 'receipt', placeholder: 'Invoice ID here...', type: 'text', required: true, width: 6 },
+                    { text: 'Invoice Date', field: 'invoiceDate', fieldIcon: 'calendar', placeholder: 'Invoice Date here...', type: 'date', required: true, width: 6 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
+                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'State', field: 'state', fieldIcon: 'location', placeholder: 'State here...', type: 'text', required: false, width: 6 },
                     {
-                        text: 'Payment Mode', field: 'paymentMode', fieldIcon: 'star', placeholder: 'Payment Mode here...', type: 'lookup', required: true, width: 6,
+                        text: 'Payment Mode', field: 'paymentMode', fieldIcon: 'wallet', placeholder: 'Payment Mode here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [
                                 { name: 'Cash' },
@@ -119,8 +125,8 @@ export const EditInvoice = () => {
                             ]
                         }
                     },
-                    { text: 'Discount Amount', field: 'discountAmount', fieldIcon: 'star', placeholder: 'Discount Amount...', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Discount Amount', field: 'discountAmount', fieldIcon: 'percent', placeholder: 'Discount Amount...', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
             {
@@ -139,7 +145,13 @@ export const EditInvoice = () => {
                                 { field: 'id', type: 'hidden-filter',schema: {
                                     module: 'invoice'
                                 } },
-                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                // { text: 'Item', field: 'name', type: '', required: true, width: 12 },
+                                {
+                                    text: 'Item', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select item...', type: 'lookup', required: true, width: 6,
+                                    schema: {
+                                        module: 'product', 
+                                    }
+                                },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
                                 { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },
@@ -169,14 +181,14 @@ export const AddInvoice = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Invoice No.', field: 'name', fieldIcon: 'star', placeholder: 'Invoice ID here...', type: 'text', required: true, width: 6 },
-                    { text: 'Invoice Date', field: 'invoiceDate', fieldIcon: 'star', placeholder: 'Invoice Date here...', type: 'date', required: true, width: 6 },
-                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'star', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
-                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'star', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
-                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'star', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
-                    { text: 'State', field: 'state', fieldIcon: 'star', placeholder: 'State here...', type: 'text', required: false, width: 6 },
+                    { text: 'Invoice No.', field: 'name', fieldIcon: 'receipt', placeholder: 'Invoice ID here...', type: 'text', required: true, width: 6 },
+                    { text: 'Invoice Date', field: 'invoiceDate', fieldIcon: 'calendar', placeholder: 'Invoice Date here...', type: 'date', required: true, width: 6 },
+                    { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
+                    { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'PAN No./ GST', field: 'panNo', fieldIcon: 'credit-card', placeholder: 'PAN NO. here..', type: 'text', required: true, width: 6 },
+                    { text: 'State', field: 'state', fieldIcon: 'location', placeholder: 'State here...', type: 'text', required: false, width: 6 },
                     {
-                        text: 'Payment Mode', field: 'paymentMode', fieldIcon: 'star', placeholder: 'Payment Mode here...', type: 'lookup', required: true, width: 6,
+                        text: 'Payment Mode', field: 'paymentMode', fieldIcon: 'wallet', placeholder: 'Payment Mode here...', type: 'lookup', required: true, width: 6,
                         schema: {
                             items: [
                                 { name: 'Cash' },
@@ -185,8 +197,8 @@ export const AddInvoice = () => {
                             ]
                         }
                     },
-                    { text: 'Discount Amount', field: 'discountAmount', fieldIcon: 'star', placeholder: 'Discount Amount...', type: 'text', required: true, width: 6 },
-                    { text: 'Address', field: 'address', fieldIcon: 'star', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
+                    { text: 'Discount Amount', field: 'discountAmount', fieldIcon: 'percent', placeholder: 'Discount Amount...', type: 'text', required: true, width: 6 },
+                    { text: 'Address', field: 'address', fieldIcon: 'home', placeholder: 'Address here...', type: 'textarea', required: true, width: 12 },
                 ]
             },
             {
