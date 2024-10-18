@@ -12,7 +12,7 @@ export const ListSupplierPurchase = () => {
         editing: true,
         adding: true,
         fields: [
-            { text: 'Supplier Name', field: 'supplier', type: 'lookup', sorting: true, searching: true,
+            { text: 'Supplier Name', field: 'name', type: 'lookup', sorting: true, searching: true,
                 schema: {module: 'supplier' }
              },
             { text: 'Total Stock', field: 'quantity', type: 'text', sorting: true, searching: true },
@@ -36,7 +36,7 @@ export const ViewSupplierPurchase = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Supplier Name', field: 'supplier', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'lookup', required: true, width: 4,
+                    { text: 'Supplier Name', field: 'name', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'lookup', required: true, width: 4,
                         schema: {
                             module: 'supplier', //Pass either module to be fetched data dynamically
                         }
@@ -68,7 +68,7 @@ export const EditSupplierPurchase = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Supplier Name', field: 'supplier', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'lookup', required: true, width: 4,
+                    { text: 'Supplier Name', field: 'name', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'lookup', required: true, width: 4,
                         schema: {
                             module: 'supplier', //Pass either module to be fetched data dynamically
                         }
@@ -100,7 +100,7 @@ export const AddSupplierPurchase = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Supplier Name', field: 'supplier', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'lookup', required: true, width: 4,
+                    { text: 'Supplier Name', field: 'name', fieldIcon: 'user', placeholder: 'Supplier Name here...', type: 'lookup', required: true, width: 4,
                         schema: {
                             module: 'supplier', //Pass either module to be fetched data dynamically
                         }

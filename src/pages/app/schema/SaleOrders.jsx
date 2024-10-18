@@ -12,7 +12,7 @@ export const ListSaleOrder = () => {
         editing: true,
         adding: true,
         fields: [
-            { text: 'Order Number', field: 'orderNumber', type: 'link', sorting: true, searching: true },
+            { text: 'Order Number', field: 'name', type: 'link', sorting: true, searching: true },
             { text: 'Date', field: 'date', type: 'date', sorting: true, searching: true },
             { text: 'Customer Name', field: 'customerName', type: 'text', sorting: true, searching: true },
             { text: 'Order Items', field: 'orderItems', type: 'text', sorting: true, searching: true },
@@ -35,7 +35,7 @@ export const ViewSaleOrder = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Order Number', field: 'orderNumber', fieldIcon: 'rectangle-list', placeholder: 'Order Number here...', type: 'text', required: true, width: 6 },
+                    { text: 'Order Number', field: 'name', fieldIcon: 'rectangle-list', placeholder: 'Order Number here...', type: 'text', required: true, width: 6 },
                     { text: 'Order Date', field: 'date', fieldIcon: 'calendar', placeholder: 'Order Date here...', type: 'date', required: true, width: 6 },
                     { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
                     { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
@@ -97,7 +97,7 @@ export const EditSaleOrder = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Order Number', field: 'orderNumber', fieldIcon: 'rectangle-list', placeholder: 'Order Number here...', type: 'text', required: true, width: 6 },
+                    { text: 'Order Number', field: 'name', fieldIcon: 'rectangle-list', placeholder: 'Order Number here...', type: 'text', required: true, width: 6 },
                     { text: 'Order Date', field: 'date', fieldIcon: 'calendar', placeholder: 'Order Date here...', type: 'date', required: true, width: 6 },
                     { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
                     { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },
@@ -159,7 +159,7 @@ export const AddSaleOrder = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Order Number', field: 'orderNumber', fieldIcon: 'rectangle-list', placeholder: 'Order Number here...', type: 'text', required: true, width: 6 },
+                    { text: 'Order Number', field: 'name', fieldIcon: 'rectangle-list', placeholder: 'Order Number here...', type: 'text', required: true, width: 6 },
                     { text: 'Order Date', field: 'date', fieldIcon: 'calendar', placeholder: 'Order Date here...', type: 'date', required: true, width: 6 },
                     { text: 'Phone No.', field: 'phoneNo', fieldIcon: 'phone', placeholder: 'Phone No. here...', type: 'text', required: true, width: 6 },
                     { text: 'Customer Name', field: 'customerName', fieldIcon: 'user', placeholder: 'Customer Name here...', type: 'text', required: true, width: 6 },

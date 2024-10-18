@@ -12,7 +12,7 @@ export const ListProduct = () => {
         editing: true,
         adding: true,
         fields: [
-            { text: 'Product Name', field: 'productName', type: 'link', sorting: true, searching: true },
+            { text: 'Product Name', field: 'name', type: 'link', sorting: true, searching: true },
             { text: 'Weight', field: 'weight', type: 'text', sorting: true, searching: true },
             {
                 text: 'Purity', field: 'purity', type: 'lookup', sorting: true, searching: true,
@@ -38,7 +38,7 @@ export const ViewProduct = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Product Name', field: 'productName', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Product Name', field: 'name', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
                     { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                     {
                         text: 'Type', field: 'type', fieldIcon: 'sitemap', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
@@ -106,7 +106,7 @@ export const EditProduct = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Product Name', field: 'productName', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Product Name', field: 'name', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
                     { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                     {
                         text: 'Type', field: 'type', fieldIcon: 'sitemap', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,
@@ -178,7 +178,7 @@ export const AddProduct = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Product Name', field: 'productName', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Product Name', field: 'name', fieldIcon: 'box-open', placeholder: 'Product Name here...', type: 'text', required: true, width: 6 },
                     { text: 'Weight', field: 'weight', fieldIcon: 'scale-balanced', placeholder: 'Weight here...', type: 'text', required: true, width: 6 },
                     {
                         text: 'Type', field: 'type', fieldIcon: 'sitemap', placeholder: 'Mention type here...', type: 'lookup', required: true, width: 6,

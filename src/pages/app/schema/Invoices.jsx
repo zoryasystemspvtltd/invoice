@@ -73,7 +73,13 @@ export const ViewInvoice = () => {
                                 { field: 'id', type: 'hidden-filter',schema: {
                                     module: 'invoice'
                                 } },
-                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                // { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                {
+                                    text: 'Item', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select item...', type: 'lookup', required: true, width: 6,
+                                    schema: {
+                                        module: 'product', 
+                                    }
+                                },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
                                 { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },
@@ -139,7 +145,13 @@ export const EditInvoice = () => {
                                 { field: 'id', type: 'hidden-filter',schema: {
                                     module: 'invoice'
                                 } },
-                                { text: 'Item', field: 'name', type: 'text', required: true, width: 12 },
+                                // { text: 'Item', field: 'name', type: '', required: true, width: 12 },
+                                {
+                                    text: 'Item', field: 'name', fieldIcon: 'scale-unbalanced-flip', placeholder: 'Please select item...', type: 'lookup', required: true, width: 6,
+                                    schema: {
+                                        module: 'product', 
+                                    }
+                                },
                                 { text: 'Quantity', field: 'quantity', type: 'text', required: true, width: 12 },
                                 { text: 'Weight(gms)', field: 'weight', type: 'text', required: true, width: 12 },
                                 { text: 'Rate[per Item]/Date', field: 'rate', type: 'text', required: true, width: 12 },

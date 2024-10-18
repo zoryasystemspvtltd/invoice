@@ -12,7 +12,7 @@ export const ListSiteSetting = () => {
         editing: true,
         adding: true,
         fields: [
-            { text: 'Company Name', field: 'companyName', type: 'link', sorting: true, searching: true },
+            { text: 'Company Name', field: 'name', type: 'link', sorting: true, searching: true },
             { text: 'GST Number', field: 'gstNumber', type: 'text', sorting: true, searching: true },
             { text: 'Phone Number', field: 'phoneNumber', type: 'text', sorting: true, searching: true },
         ]
@@ -34,7 +34,7 @@ export const ViewSiteSetting = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Company Name', field: 'companyName', fieldIcon: 'building', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Company Name', field: 'name', fieldIcon: 'building', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
                     { text: 'Invoice Title', field: 'invoiceTitle', fieldIcon: 'grip-lines', placeholder: 'Invoice Title here...', type: 'text', required: true, width: 6 },
                     { text: 'GST Number', field: 'gstNumber', fieldIcon: 'credit-card', placeholder: 'GST number here...', type: 'text', required: true, width: 6 },
                     { text: 'Sale Order Starts', field: 'saleOrderStarts', fieldIcon: 'star', placeholder: 'Sale order starts here...', type: 'text', required: true, width: 6 },
@@ -68,7 +68,7 @@ export const EditSiteSetting = () => {
             {
                 type: "area", width: 12
                 , fields: [
-                    { text: 'Company Name', field: 'companyName', fieldIcon: 'building', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
+                    { text: 'Company Name', field: 'name', fieldIcon: 'building', placeholder: 'Company Name here...', type: 'text', required: true, width: 6 },
                     { text: 'Invoice Title', field: 'invoiceTitle', fieldIcon: 'grip-lines', placeholder: 'Invoice Title here...', type: 'text', required: true, width: 6 },
                     { text: 'GST Number', field: 'gstNumber', fieldIcon: 'credit-card', placeholder: 'GST number here...', type: 'text', required: true, width: 6 },
                     { text: 'Sale Order Starts', field: 'saleOrderStarts', fieldIcon: 'star', placeholder: 'Sale order starts here...', type: 'text', required: true, width: 6 },
